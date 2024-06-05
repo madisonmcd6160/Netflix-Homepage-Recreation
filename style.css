@@ -1,0 +1,287 @@
+/* Madison McDonald
+June 3, 2024
+Remaking the Netflix Home Page to get practice using html and css and
+trying different design techniques. */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/header-image.png); /* Places the background image and gives it a gradient */
+    background-size: cover; /* Takes up the entire page with the image */
+    background-position: center; /* Places the image in the center */
+    padding: 10px 8%;
+    position: relative;
+}
+nav{ /* stylizes the navigation buttons */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo{ /* Stylize the logo image (red Netflix logo) */
+    width: 150px;
+    cursor: pointer; /* Makes the cursor a pointer when hovering over the logo */
+}
+nav button{ /* Stylize the buttons in the naviagtion */
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.language-btn{ /* Stylize the language button box shape and colors */
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+.language-btn img{ /* Stylize the language button down arrow image */
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{ /* Stylize the headers to get the right positions */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{ /* Stylize the header content of the h1 tag */
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3{ /* Stylize the h3 content */
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup{ /* Stylize the email signup section */
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{ /* Stylize the input box */
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-signup button{ /* Stylize the signup button */
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+/* Stylizing for the features when you scroll down on the page */
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+.row{ /* Styling the row from the HTML file */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{ /* Stylize the text column to get the positioning correct */
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{ /* stylize the image column for the feature-1 png */
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{ /* In the features class, stylize the h2 tags */
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Frequently Asked Questions stylization */
+
+.faq{ /* Stylize the faq */
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{ /* Stylize the h2 tags in the faq div class */
+    font-weight: 500;
+    font-size: 40px;
+}
+.accordion{ /* Stylize the accordian list of faqs */
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{ /* Stylize the list qualities in the accordion */
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{ /* Stylize the labels in the list in the accordion */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{ /* After the label, add + to the end of the rectangle box */
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s; /* Turn the '+' into 'x' when tab is opened */
+}
+input[type="radio"]{ /* Change the input ratio buttons to not display */
+    display:none;
+}
+.accordion .content{ /* Change the content of the accordion list to have a background */
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s; /* When one gets clicked after another, slowly transition to the other */
+}
+.accordion input[type="radio"]:checked + label + .content{ /* If the input is checked, add a label and content */
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{ /* Turn the '+' to 'x' whenever it is opened */
+    transform: rotate(135deg);
+}
+.faq .email-signup{ /* Stylize the email signup after the faq section */
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{ /* Change the small section in the faq */
+    font-size: 13px;
+}
+
+/* Footer section at the bottom of the page */
+
+.footer{ /* Set up the footer background colors */
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer h2{ /* Stylize the h2 tags in the footer */
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{ /* Stylize the col in the footer */
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{ /* Stylize the links in the footer col */
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{ /* Stylize the footer rows */
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{ /* Change the language button so that the color is visibile in the footer */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px
+}
+.copyright-txt{ /* Stylize the copyright */
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* media-queries-for-small-screen */
+
+@media only screen and (max-width: 600px){ /* Format the media to work on smaller scale too */
+    .logo{ /* Format the Netflix logo */
+        width: 100px;
+    }
+    nav button{ /* Format the navigation button */
+        padding: 5px 10px;
+    }
+    nav .language-btn{ /* Format the language button in the navigation tab */
+        padding: 4px 8px;
+    }
+    .header-content{ /* Format the header content */
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1{ /* Format the h1 tags in the header content */
+        font-size: 30px;
+    }
+    .email-signup button{ /* Format the email signup button */
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .text-col, .img-col{ /* Format the image columns and rows */
+        flex-basis: 100%;
+    }
+    .features h2{ /* Format the size of the h2 tags in the features class so it isn't as large */
+        font-size: 30px;
+    }
+    .features p{ /* Format the size of the paragraph tags in the features class so it isn't as large */
+        font-size: 15px;
+    }
+    .row:nth-child(2), .row:nth-child(4){ /* Alternate the text and images */
+        flex-direction: column-reverse;
+    }
+    .features .row{ /* Format the rows in the features class so they are spaced evenly */
+        padding: 10px 0;
+    }
+    .faq h2{ /* Format the h2 tags in the faq */
+        font-size: 20px;
+    }
+    .accordion .content{ /* Format the content in the accordian */
+        font-size: 14px;
+    }
+    .accordion li label{ /* Format the list labels in the accordion */
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{ /* Format the '+' and 'x' on the faq bars to be smaller */
+        font-size: 22px;
+    }
+}

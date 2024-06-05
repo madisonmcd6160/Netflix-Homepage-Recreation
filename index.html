@@ -1,0 +1,174 @@
+<!-- Madison McDonald
+June 3, 2024
+Remaking the Netflix Home Page to get practice using html and css and
+trying different design techniques.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix Website Clone - Easy Tutorials Guide</title>
+        <link rel="stylesheet" href="style.css"> <!-- links the style.css to the index --> >
+    </head>
+    <body>
+        <div class="header">
+           <nav>
+                <img src="images/logo.png" class="logo"> <!-- Places the Netflix logo in the corner -->
+                <div> <!-- Creates the div for the navigation, with two buttons -->
+                    <button class="language-btn">English <img src="images/down-icon.png"></button> <!-- Add class so this button can be stylized in style.css -->
+                    <button>Sign In</button>
+                </div>
+           </nav> 
+           <div class="header-content"> <!-- Wording on the page -->
+                <h1>Unlimimited movies, TV shows and more.</h1> <!-- Biggest text -->
+                <h3>Watch anywhere. Cancel anytime.</h3>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <form class="email-signup">
+                    <input type="email" placeholder="Email address" required> <!-- Allows for email to be entered only in email form -->
+                    <button type="submit">Get Started</button> <!-- Button to get started -->
+                </form>
+            </div>
+        </div>
+
+        <div class="features">
+            <!-- First "row" of image/text when you scroll down -->
+            <div class="row">
+                <div class="text-col">
+                    <h2>Enjoy on your TV.</h2>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div class="img-col">
+                    <img src="images/feature-1.png">
+                </div>
+            </div>
+            <!-- Second "row" of image/text when you scroll down -->
+            <div class="row">
+                <div class="img-col">
+                    <img src="images/feature-2.png">
+                </div>
+                <div class="text-col">
+                    <h2>Download your shows to watch offline.</h2>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                </div>
+            </div>
+            <!-- Third "row" of image/text when you scroll down -->
+            <div class="row">
+                <div class="text-col">
+                    <h2>Watch everywhere.</h2>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+                <div class="img-col">
+                    <img src="images/feature-3.png">
+                </div>
+            </div>
+            <!-- Fourth "row" of image/text when you scroll down -->
+            <div class="row">
+                <div class="img-col">
+                    <img src="images/feature-4.png">
+                </div>
+                <div class="text-col">
+                    <h2>Create profiles for children.</h2>
+                    <p>Send children on adventures with their favorite characters in a space made just for them-free with your membership.</p>
+                </div>
+            </div>
+        </div>
+
+<div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul class="accordion"> <!-- Create an unordered list of the faq -->
+        <li>
+            <input type="radio" name="accordion" id="first"> <!-- make the first faq and answer -->
+            <label for="first">What is Netflix?</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="second"> <!-- make the second faq and answer -->
+            <label for="second">How much does Netflix cost?</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="third"> <!-- make the third faq and answer -->
+            <label for="third">Where can I watch?</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fourth"> <!-- make the fourth faq and answer -->
+            <label for="fourth">How do I cancel?</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fifth"> <!-- make the fifth faq and answer -->
+            <label for="third">What can I watch on Netflix?</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="sixth"> <!-- make the sixth faq and answer -->
+            <label for="sixth">Is Netflix good for kids?</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+    </ul>
+    <small>Ready to watch? Enter your email to create or restart your membership.</small>
+    <form class="email-signup">
+        <input type="email" placeholder="Email address" required> <!-- Allows for email to be entered only in email form -->
+        <button type="submit">Get Started</button> <!-- Button to get started -->
+    </form>
+</div>
+        
+<div class="footer"> <!-- Footer for the bottom of the page -->
+    <h2>Questions? call 000-000-000-000</h2>
+
+    <div class="row">
+        <div class="col">
+            <a href="#">FAQ</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Privacy</a>
+            <a href="#">Speed Test</a>
+        </div>
+        <div class="col">
+            <a href="#">Help Center</a>
+            <a href="#">Jobs</a>
+            <a href="#">Cookies Preferences</a>
+            <a href="#">Legal Notices</a>
+        </div>
+        <div class="col">
+            <a href="#">Account</a>
+            <a href="#">Ways to watch</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Only on Netflix</a>
+        </div>
+        <div class="col">
+            <a href="#">Media Center</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <button class="language-btn">English <img src="images/down-icon.png"></button> <!-- Language button to appear in footer -->
+    <p class="copyright-txt">Netflix USA</p> <!-- Add a copyright for Netlix -->
+</div>
+
+    </body>
+</html>
